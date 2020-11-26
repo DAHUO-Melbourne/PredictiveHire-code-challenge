@@ -18,7 +18,14 @@ export const data = [
               {
                 "key": 19,
                 "title": "版本测试",
-                "url": ""
+                "url": "",
+                "children": [
+                  {
+                    "key": 11,
+                    "title": "新增项目",
+                    "url": "",
+                  }
+                ]
               }
             ]
           }, {
@@ -51,5 +58,10 @@ export const data = [
     "icon": "mail",
     "title": "EMC测试科",
     "url": ""
+  },
+  {
+    "key": 21,
+    "title": "login",
+    "url": "login",
   }
 ]
