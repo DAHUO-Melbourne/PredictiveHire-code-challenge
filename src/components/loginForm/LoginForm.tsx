@@ -35,8 +35,8 @@ function LoginForm(): JSX.Element {
   return (
     <form className="auth-form" data-test="LoginForm" onSubmit={(e) => { handleSubmit(e) }}>
       <div className="form-control">
-        <label htmlFor="email">username</label>
-        <input data-test="usernameInput" id="email" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <label htmlFor="username">username</label>
+        <input data-test="usernameInput" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
       <div className="form-control">
         <label htmlFor="password">password</label>
