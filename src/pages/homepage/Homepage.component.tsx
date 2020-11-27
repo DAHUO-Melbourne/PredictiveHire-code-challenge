@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '../../components/menu';
 import { data } from '../../data';
 
-function Homepage() {
+function Homepage(): JSX.Element {
   return (
     <div>
       <Menu data={data} />

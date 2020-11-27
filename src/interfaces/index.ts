@@ -2,7 +2,7 @@ export interface IMenuProps {
   data: Array<IMenuItem>,
 }
 
-interface IMenuItem {
+export interface IMenuItem {
   key: number,
   icon?: string,
   url: string,

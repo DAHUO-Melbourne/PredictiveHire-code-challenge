@@ -1,15 +1,13 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Menu } from 'antd';
-import Icon from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import { IMenuProps } from '../../interfaces';
+import { IMenuProps, IMenuItem } from '../../interfaces';
 
 const { SubMenu } = Menu;
 
-function MenuComponent(props: IMenuProps) {
-  console.log(props.data);
-  const recursion = (data: Array<any>) => {
+function MenuComponent(props: IMenuProps): JSX.Element {
+  const recursion = (data: Array<IMenuItem>) => {
     return (
       data.map((menu) => {
         if (menu.children) {
@@ -21,7 +19,6 @@ function MenuComponent(props: IMenuProps) {
         } else {
           return (
             <Menu.Item key={menu.key}>
-              <Icon type={menu.icon} />
               <Link to={menu.url}>
                 {menu.title}
               </Link>
