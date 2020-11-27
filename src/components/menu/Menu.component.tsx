@@ -29,8 +29,7 @@ function MenuComponent(props: IMenuProps): JSX.Element {
   }
   return (
     <Menu
-      mode="inline"
-      style={{ width: 240 }}
+      mode="horizontal"
     >
       {recursion(props.data)}
     </Menu>

@@ -41,8 +41,7 @@ export const data = [
         "children": [
           {
             "key": 16,
-            "text": "版本测试",
-            "title": "",
+            "title": "版本测试",
             "url": ""
           }
         ]

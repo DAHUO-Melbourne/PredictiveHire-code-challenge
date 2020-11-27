@@ -7,6 +7,5 @@ export interface IMenuItem {
   icon?: string,
   url: string,
   title: string,
-  text?: string
   children?: Array<IMenuItem>
 }
