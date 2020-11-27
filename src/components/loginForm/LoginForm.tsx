@@ -33,14 +33,14 @@ function LoginForm(): JSX.Element {
     }
   }
   return (
-    <form className="auth-form" onSubmit={(e) => { handleSubmit(e) }}>
+    <form className="auth-form" data-test="LoginForm" onSubmit={(e) => { handleSubmit(e) }}>
       <div className="form-control">
         <label htmlFor="email">username</label>
-        <input id="email" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input data-test="usernameInput" id="email" value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
       <div className="form-control">
         <label htmlFor="password">password</label>
-        <input id="password" value={password} type="password" onChange={(e) => setPassword(e.target.value)} />
+        <input data-test="passwordInput" id="password" value={password} type="password" onChange={(e) => setPassword(e.target.value)} />
       </div>
       <div className="form-actions">
         <button type="submit">submit</button>

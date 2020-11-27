@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 function App() {
   return (
     <Fragment>
-      <BrowserRouter>
+      <BrowserRouter data-test="App">
         <Route path='/' exact component={Homepage}></Route>
         <Route path='/login' exact component={LoginPage}></Route>
       </BrowserRouter>

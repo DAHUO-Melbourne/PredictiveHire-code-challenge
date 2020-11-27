@@ -5,7 +5,7 @@ import './Homepage.css';
 
 function Homepage(): JSX.Element {
   return (
-    <div>
+    <div data-test="Homapage">
       <Menu data={data} />
       <h1 className="heading">Welcome to PreditiveHire!</h1>
     </div>
