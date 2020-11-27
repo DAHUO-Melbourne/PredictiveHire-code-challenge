@@ -2,27 +2,27 @@ export const data = [
   {
     "key": 1,
     "icon": "appstore",
-    "title": "软件测试科",
+    "title": "Recruiment Automation",
     "url": "",
     "children": [
       {
         "key": 4,
-        "title": "广电组",
+        "title": "Solutions",
         "url": "",
         "children": [
           {
             "key": 8,
-            "title": "客制化",
+            "title": "Science Explained",
             "url": "",
             "children": [
               {
                 "key": 19,
-                "title": "版本测试",
+                "title": "Time Calculator",
                 "url": "",
                 "children": [
                   {
                     "key": 11,
-                    "title": "新增项目",
+                    "title": "Retail Ebook",
                     "url": "",
                   }
                 ]
@@ -30,18 +30,18 @@ export const data = [
             ]
           }, {
             "key": 9,
-            "title": "客供",
+            "title": "Protect your Data",
             "url": ""
           }
         ]
       }, {
         "key": 5,
-        "title": "光通组",
+        "title": "Why its Fair",
         "url": "",
         "children": [
           {
             "key": 16,
-            "title": "版本测试",
+            "title": "Version Testing",
             "url": ""
           }
         ]
@@ -50,12 +50,12 @@ export const data = [
   }, {
     "key": 2,
     "icon": "setting",
-    "title": "硬件测试科",
+    "title": "Resources",
     "url": ""
   }, {
     "key": 3,
     "icon": "mail",
-    "title": "EMC测试科",
+    "title": "Reviews",
     "url": ""
   },
   {

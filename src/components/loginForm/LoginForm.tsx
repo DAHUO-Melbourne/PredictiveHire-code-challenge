@@ -1,22 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { createServer } from "miragejs";
 import axios from 'axios';
 import { message } from 'antd';
 import { Link } from 'react-router-dom';
 import './LoginForm.css';
-
-createServer({
-  routes() {
-    this.post("/api/login", (schema, request) => {
-      let attrs = JSON.parse(request.requestBody);
-      if (attrs.username === "Okay" && attrs.password === "okay") {
-        return ['Logged in successfully']
-      } else {
-        return ['logged in failed']
-      }
-    })
-  },
-})
 
 function LoginForm(): JSX.Element {
   const [res, setRes] = useState<string[]>([]);
@@ -25,10 +11,10 @@ function LoginForm(): JSX.Element {
 
   useEffect(() => {
     if (res[0] === 'Logged in successfully') {
-      message.info('Successfully logged in');
+      message.success('Successfully logged in');
     }
     if (res[0] === 'logged in failed') {
-      message.info('logged in failed');
+      message.error('logged in failed');
       setUsername('');
       setPassword('');
     }
@@ -40,8 +26,8 @@ function LoginForm(): JSX.Element {
       message.info('Please complete your username and password!');
     } else {
       axios.post("/api/login", {
-        username: username,
-        password: password
+        username,
+        password
       }).then((response) => response.data)
         .then((json) => setRes(json))
     }
