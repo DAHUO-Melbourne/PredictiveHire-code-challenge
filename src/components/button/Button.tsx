@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
+import './Button.css';
 
 interface IButton {
   href?: string,
@@ -14,12 +15,12 @@ function ButtonComponent(props: IButton): JSX.Element {
   if (href) {
     return (
       <Link to={href}>
-        <Button htmlType={type} loading={loading}>{content}</Button>
+        <Button className="form-button" htmlType={type} loading={loading}>{content}</Button>
       </Link>
     )
   } else {
     return (
-      <Button htmlType={type} loading={loading}>{content}</Button>
+      <Button className="form-button" htmlType={type} loading={loading}>{content}</Button>
     )
   }
 }
