@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './InputBox.css';
+import './InputBox.scss';
 import { IInputBox } from '../../interfaces/interfaces';
 
 function InputBox(props: IInputBox) {

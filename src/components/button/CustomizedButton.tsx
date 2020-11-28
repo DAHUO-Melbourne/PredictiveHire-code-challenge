@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
-import './CustomizedButton.css';
+import './CustomizedButton.scss';
 import { IButton } from '../../interfaces/interfaces';
 
 function ButtonComponent(props: IButton): JSX.Element {

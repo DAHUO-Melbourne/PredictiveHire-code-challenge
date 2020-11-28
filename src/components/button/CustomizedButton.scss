@@ -8,10 +8,9 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
   color: white;
   cursor: pointer;
-}
-
-.form-button:hover,
-.form-button:active {
+  &:hover,
+  &:active{
     background: #007bff;
     border-color: #007bff;
+  }
 }
