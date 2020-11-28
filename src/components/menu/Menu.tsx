@@ -2,20 +2,9 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import { IMenuProps, IMenuItem } from '../../interfaces/interfaces';
 
 const { SubMenu } = Menu;
-
-interface IMenuProps {
-  data: Array<IMenuItem>,
-}
-
-interface IMenuItem {
-  key: number,
-  icon?: string,
-  url: string,
-  title: string,
-  children?: Array<IMenuItem>
-}
 
 function MenuComponent(props: IMenuProps): JSX.Element {
   const recursion = (data: Array<IMenuItem>) => {

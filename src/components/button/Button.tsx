@@ -2,13 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import './Button.css';
-
-interface IButton {
-  href?: string,
-  loading: boolean,
-  type: "button" | "submit" | "reset" | undefined,
-  content: string
-}
+import { IButton } from '../../interfaces/interfaces';
 
 function ButtonComponent(props: IButton): JSX.Element {
   const { href, loading, type, content } = props;

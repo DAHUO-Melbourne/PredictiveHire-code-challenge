@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import './InputBox.css';
+import { IInputBox } from '../../interfaces/interfaces';
 
-interface IProps {
-  id: string,
-  name: string,
-  type?: string,
-  value: string,
-  changeValue: (e: React.FormEvent<HTMLInputElement>) => void
-}
-
-function InputBox(props: IProps) {
+function InputBox(props: IInputBox) {
   const [isDirty, setIsDirty] = useState<boolean>(false);
   const { id, name, type, value, changeValue } = props;
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
