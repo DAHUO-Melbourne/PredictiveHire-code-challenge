@@ -8,13 +8,13 @@ function ButtonComponent(props: IButton): JSX.Element {
   const { href, loading, type, content } = props;
   if (href) {
     return (
-      <Link to={href}>
+      <Link to={href} data-test="link-button">
         <Button className="form-button" htmlType={type} loading={loading}>{content}</Button>
       </Link>
     )
   } else {
     return (
-      <Button className="form-button" htmlType={type} loading={loading}>{content}</Button>
+      <Button className="form-button" data-test="no-link-button" htmlType={type} loading={loading}>{content}</Button>
     )
   }
 }

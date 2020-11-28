@@ -41,11 +41,33 @@ function LoginForm(): JSX.Element {
   }
   return (
     <form className="auth-form" data-test="LoginForm" onSubmit={(e) => { handleSubmit(e) }}>
-      <InputBox id="username" name="username" value={username} changeValue={handleUsernameInput} />
-      <InputBox id="password" name="password" type="password" value={password} changeValue={handlePasswordInput} />
+      <InputBox
+        id="username"
+        name="username"
+        value={username}
+        data-test="usernameInput"
+        changeValue={handleUsernameInput}
+      />
+      <InputBox
+        id="password"
+        name="password"
+        type="password"
+        value={password}
+        data-test="passwordInput"
+        changeValue={handlePasswordInput}
+      />
       <div className="form-actions">
-        <ButtonComponent loading={loading} type='submit' content='submit' />
-        <ButtonComponent href='/' loading={false} type='button' content='cancel' />
+        <ButtonComponent
+          loading={loading}
+          type='submit'
+          content='submit'
+        />
+        <ButtonComponent
+          href='/'
+          loading={false}
+          type='button'
+          content='cancel'
+        />
       </div>
     </form >
   )
