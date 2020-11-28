@@ -11,10 +11,10 @@ const setUp = (props = {}) => {
 describe('InputBox should be correctly rendered', () => {
   let component;
   const props = {
-    id: "username", 
-    name: "username", 
-    value: "", 
-    changeValue: ()=>{}
+    id: "username",
+    name: "username",
+    value: "",
+    changeValue: () => { }
   }
   beforeEach(() => {
     component = setUp(props);
@@ -33,13 +33,13 @@ describe('InputBox should be correctly rendered', () => {
   })
 })
 
-describe('InputBox should correctly show error message', ()=>{
+describe('InputBox should correctly show error message', () => {
   let component;
   const props = {
-    id: "username", 
-    name: "username", 
-    value: "", 
-    changeValue: ()=>{}
+    id: "username",
+    name: "username",
+    value: "",
+    changeValue: () => { }
   }
   beforeEach(() => {
     component = setUp(props);
@@ -47,8 +47,8 @@ describe('InputBox should correctly show error message', ()=>{
   it('input initial value should be correct', () => {
     const wrapper = findByTestAttr(component, 'input');
     wrapper.simulate('change', {
-      currentTarget:{
-        value:''
+      currentTarget: {
+        value: ''
       }
     })
     const errMsg = findByTestAttr(component, 'error-message');

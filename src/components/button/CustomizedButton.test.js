@@ -11,9 +11,9 @@ const setUp = (props = {}) => {
 describe('link button correctly rendered', () => {
   let component;
   const props = {
-    href: "/", 
-    loading: false, 
-    type: "button", 
+    href: "/",
+    loading: false,
+    type: "button",
     content: 'click'
   }
   beforeEach(() => {
@@ -28,8 +28,8 @@ describe('link button correctly rendered', () => {
 describe('no-link button correctly rendered', () => {
   let component;
   const props = {
-    loading: false, 
-    type: "button", 
+    loading: false,
+    type: "button",
     content: 'click'
   }
   beforeEach(() => {

@@ -36,9 +36,11 @@ function LoginForm(): JSX.Element {
   const handleUsernameInput = (e: React.FormEvent<HTMLInputElement>) => {
     setUsername(e.currentTarget.value)
   }
+
   const handlePasswordInput = (e: React.FormEvent<HTMLInputElement>) => {
     setPassword(e.currentTarget.value)
   }
+
   return (
     <form className="auth-form" data-test="login-form" onSubmit={(e) => { handleSubmit(e) }}>
       <InputBox
@@ -61,6 +63,7 @@ function LoginForm(): JSX.Element {
           loading={loading}
           type='submit'
           content='submit'
+          data-test='submit-button'
         />
         <ButtonComponent
           href='/'

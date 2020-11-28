@@ -17,6 +17,14 @@ describe('correctly rendered', () => {
     const wrapper = findByTestAttr(component, 'login-form');
     expect(wrapper.length).toBe(1)
   })
+  it('Should render username input correctly', () => {
+    const inputElem = findByTestAttr(component, 'username-input');
+    expect(inputElem.length).toBe(1)
+  })
+  it('Should render password input correctly', () => {
+    const inputElem = findByTestAttr(component, 'password-input');
+    expect(inputElem.length).toBe(1)
+  })
 })
 
 describe('InputBox correctly interacted', () => {
@@ -24,12 +32,23 @@ describe('InputBox correctly interacted', () => {
   beforeEach(() => {
     component = setUp();
   })
-  it('Should show username input correctly', () => {
-    const inputElem = findByTestAttr(component, 'username-input');
-    expect(inputElem.length).toBe(1)
-  })
-  it('Should show password input correctly', () => {
-    const inputElem = findByTestAttr(component, 'password-input');
-    expect(inputElem.length).toBe(1)
+  it('should set button loading to true', () => {
+    const usernameInputElem = findByTestAttr(component, 'username-input');
+    const passwordInputElem = findByTestAttr(component, 'password-input');
+    usernameInputElem.simulate('change', {
+      currentTarget: {
+        value: 'aaa'
+      }
+    })
+    passwordInputElem.simulate('change', {
+      currentTarget: {
+        value: 'aaa'
+      }
+    })
+    component.simulate('submit', {
+      preventDefault: () => { }
+    })
+    const submitButton = findByTestAttr(component, 'submit-button');
+    expect(submitButton.props().loading).toBe(true);
   })
 })
