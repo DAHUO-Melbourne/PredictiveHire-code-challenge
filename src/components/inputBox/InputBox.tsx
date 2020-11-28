@@ -10,7 +10,7 @@ function InputBox(props: IInputBox) {
     changeValue(e);
   }
   return (
-    <div className="form-control">
+    <div className="form-control" data-test="input-box">
       <label htmlFor={id}>{name}</label>
       <input data-test="usernameInput" type={type} id={id} value={value} onChange={(e) => handleChange(e)} required />
       {isDirty && !value && <div className="error-msg">please input your {name}</div>}
