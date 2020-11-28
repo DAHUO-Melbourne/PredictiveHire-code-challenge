@@ -40,12 +40,12 @@ function LoginForm(): JSX.Element {
     setPassword(e.currentTarget.value)
   }
   return (
-    <form className="auth-form" data-test="LoginForm" onSubmit={(e) => { handleSubmit(e) }}>
+    <form className="auth-form" data-test="login-form" onSubmit={(e) => { handleSubmit(e) }}>
       <InputBox
         id="username"
         name="username"
         value={username}
-        data-test="usernameInput"
+        data-test="username-input"
         changeValue={handleUsernameInput}
       />
       <InputBox
@@ -53,7 +53,7 @@ function LoginForm(): JSX.Element {
         name="password"
         type="password"
         value={password}
-        data-test="passwordInput"
+        data-test="password-input"
         changeValue={handlePasswordInput}
       />
       <div className="form-actions">

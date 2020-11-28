@@ -30,7 +30,7 @@ function MenuComponent(props: IMenuProps): JSX.Element {
   return (
     <Menu
       mode="horizontal"
-      data-test="MenuComponent"
+      data-test="menu-component"
     >
       {recursion(props.data)}
     </Menu>

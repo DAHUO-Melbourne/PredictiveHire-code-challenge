@@ -3,7 +3,7 @@ import LoginForm from '../../components/loginForm';
 
 function LoginPage(): JSX.Element {
   return (
-    <div data-test="LoginPage">
+    <div data-test="login-page">
       <LoginForm />
     </div>
   )

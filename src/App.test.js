@@ -14,7 +14,7 @@ describe('correctly rendered', () => {
     component = setUp();
   })
   it('Should render correctly', () => {
-    const wrapper = findByTestAttr(component, 'App');
+    const wrapper = findByTestAttr(component, 'app');
     expect(wrapper.length).toBe(1)
   })
 })

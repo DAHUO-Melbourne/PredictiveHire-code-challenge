@@ -14,7 +14,7 @@ describe('correctly rendered', () => {
     component = setUp();
   })
   it('Should render correctly', () => {
-    const wrapper = findByTestAttr(component, 'LoginForm');
+    const wrapper = findByTestAttr(component, 'login-form');
     expect(wrapper.length).toBe(1)
   })
 })
@@ -25,11 +25,11 @@ describe('input correctly interacted', () => {
     component = setUp();
   })
   it('Should show username correctly', () => {
-    const inputElem = findByTestAttr(component, 'usernameInput');
+    const inputElem = findByTestAttr(component, 'username-input');
     expect(inputElem.length).toBe(1)
   })
   it('Should show password correctly', () => {
-    const inputElem = findByTestAttr(component, 'passwordInput');
+    const inputElem = findByTestAttr(component, 'password-input');
     expect(inputElem.length).toBe(1)
   })
 })
