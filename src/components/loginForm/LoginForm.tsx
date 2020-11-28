@@ -3,7 +3,7 @@ import { message } from 'antd';
 import './LoginForm.css';
 import ButtonComponent from '../button';
 import InputBox from '../inputBox';
-import { login } from '../../api';
+import { login } from '../../api/apis';
 
 function LoginForm(): JSX.Element {
   const [username, setUsername] = useState<string>('');

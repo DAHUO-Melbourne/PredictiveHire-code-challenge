@@ -29,3 +29,12 @@ export interface ILogin {
   username: string,
   password: string
 }
+
+export interface IPromiseReturn {
+  data: Array<string>,
+  headers: object,
+  config: object,
+  request: object,
+  status: number,
+  statusText: string
+}
