@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import { message } from 'antd';
 import './LoginForm.css';
 import ButtonComponent from '../button';
 import InputBox from '../inputBox';
+import { login } from '../../api';
 
 function LoginForm(): JSX.Element {
   const [username, setUsername] = useState<string>('');
@@ -14,10 +14,8 @@ function LoginForm(): JSX.Element {
     e.preventDefault();
     setLoading(true);
     if (username && password) {
-      axios.post("/api/login", {
-        username,
-        password
-      }).then((response) => response.data)
+      login({ username, password })
+        .then((response) => response.data)
         .then((json) => {
           setLoading(false);
           if (json[0] === 'Logged in successfully') {

@@ -24,3 +24,8 @@ export interface IMenuItem {
   title: string,
   children?: Array<IMenuItem>
 }
+
+export interface ILogin {
+  username: string,
+  password: string
+}
