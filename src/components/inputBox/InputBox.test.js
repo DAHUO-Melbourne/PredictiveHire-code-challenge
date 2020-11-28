@@ -8,7 +8,7 @@ const setUp = (props = {}) => {
   return component
 }
 
-describe('correctly rendered', () => {
+describe('InputBox should be correctly rendered', () => {
   let component;
   const props = {
     id: "username", 
@@ -19,8 +19,12 @@ describe('correctly rendered', () => {
   beforeEach(() => {
     component = setUp(props);
   })
-  it('Should render correctly', () => {
+  it('InputBox should be rendered correctly', () => {
     const wrapper = findByTestAttr(component, 'input-box');
     expect(wrapper.length).toBe(1)
+  })
+  it('input initial value should be correct', () => {
+    const wrapper = findByTestAttr(component, 'input');
+    expect(wrapper.props().value).toBe("");
   })
 })

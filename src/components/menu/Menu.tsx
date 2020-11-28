@@ -12,7 +12,7 @@ function MenuComponent(props: IMenuProps): JSX.Element {
       data.map((menu) => {
         if (menu.children) {
           return (
-            <SubMenu key={menu.key} title={menu.title}>
+            <SubMenu key={menu.key} title={menu.title} data-test="sub-menu">
               {recursion(menu.children)}
             </SubMenu>
           )

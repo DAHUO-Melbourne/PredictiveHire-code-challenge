@@ -12,7 +12,7 @@ describe('link button correctly rendered', () => {
   let component;
   const props = {
     href: "/", 
-    loading: "false", 
+    loading: false, 
     type: "button", 
     content: 'click'
   }
@@ -28,7 +28,7 @@ describe('link button correctly rendered', () => {
 describe('no-link button correctly rendered', () => {
   let component;
   const props = {
-    loading: "false", 
+    loading: false, 
     type: "button", 
     content: 'click'
   }
@@ -38,5 +38,13 @@ describe('no-link button correctly rendered', () => {
   it('Should render correctly', () => {
     const wrapper = findByTestAttr(component, 'no-link-button');
     expect(wrapper.length).toBe(1)
+  })
+  it('Button load should render correctly', () => {
+    const wrapper = findByTestAttr(component, 'no-link-button');
+    expect(wrapper.props().loading).toBe(false);
+  })
+  it('Button type should render correctly', () => {
+    const wrapper = findByTestAttr(component, 'no-link-button');
+    expect(wrapper.props().htmlType).toBe("button");
   })
 })

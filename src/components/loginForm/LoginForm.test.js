@@ -19,16 +19,16 @@ describe('correctly rendered', () => {
   })
 })
 
-describe('input correctly interacted', () => {
+describe('InputBox correctly interacted', () => {
   let component;
   beforeEach(() => {
     component = setUp();
   })
-  it('Should show username correctly', () => {
+  it('Should show username input correctly', () => {
     const inputElem = findByTestAttr(component, 'username-input');
     expect(inputElem.length).toBe(1)
   })
-  it('Should show password correctly', () => {
+  it('Should show password input correctly', () => {
     const inputElem = findByTestAttr(component, 'password-input');
     expect(inputElem.length).toBe(1)
   })
