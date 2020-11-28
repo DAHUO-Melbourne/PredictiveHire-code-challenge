@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
-import './Button.css';
+import './CustomizedButton.css';
 import { IButton } from '../../interfaces/interfaces';
 
 function ButtonComponent(props: IButton): JSX.Element {
@@ -19,4 +19,4 @@ function ButtonComponent(props: IButton): JSX.Element {
   }
 }
 
-export default ButtonComponent
+export default ButtonComponent;
