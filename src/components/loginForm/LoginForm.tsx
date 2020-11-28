@@ -3,6 +3,7 @@ import axios from 'axios';
 import { message } from 'antd';
 import './LoginForm.css';
 import ButtonComponent from '../button';
+import InputBox from '../inputBox';
 
 function LoginForm(): JSX.Element {
   const [username, setUsername] = useState<string>('');
@@ -33,21 +34,22 @@ function LoginForm(): JSX.Element {
         })
     }
   }
+
+  const handleUsernameInput = (e: React.FormEvent<HTMLInputElement>) => {
+    setUsername(e.currentTarget.value)
+  }
+  const handlePasswordInput = (e: React.FormEvent<HTMLInputElement>) => {
+    setPassword(e.currentTarget.value)
+  }
   return (
     <form className="auth-form" data-test="LoginForm" onSubmit={(e) => { handleSubmit(e) }}>
-      <div className="form-control">
-        <label htmlFor="username">username</label>
-        <input data-test="usernameInput" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
-      </div>
-      <div className="form-control">
-        <label htmlFor="password">password</label>
-        <input data-test="passwordInput" id="password" value={password} type="password" onChange={(e) => setPassword(e.target.value)} required />
-      </div>
+      <InputBox id="username" name="username" value={username} changeValue={handleUsernameInput} />
+      <InputBox id="password" name="password" type="password" value={password} changeValue={handlePasswordInput} />
       <div className="form-actions">
         <ButtonComponent loading={loading} type='submit' content='submit' />
         <ButtonComponent href='/' loading={false} type='button' content='cancel' />
       </div>
-    </form>
+    </form >
   )
 }
 
