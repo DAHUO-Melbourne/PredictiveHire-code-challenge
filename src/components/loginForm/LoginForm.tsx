@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { message } from 'antd';
-import { Link } from 'react-router-dom';
 import './LoginForm.css';
-import { Button } from 'antd';
+import ButtonComponent from '../button';
 
 function LoginForm(): JSX.Element {
   const [username, setUsername] = useState<string>('');
@@ -45,12 +44,8 @@ function LoginForm(): JSX.Element {
         <input data-test="passwordInput" id="password" value={password} type="password" onChange={(e) => setPassword(e.target.value)} required />
       </div>
       <div className="form-actions">
-        <Button htmlType="submit" loading={loading}>submit</Button>
-        <Link to='/'>
-          <Button>
-            cancel
-            </Button>
-        </Link>
+        <ButtonComponent loading={loading} type='submit' content='submit' />
+        <ButtonComponent href='/' loading={false} type='button' content='cancel' />
       </div>
     </form>
   )
