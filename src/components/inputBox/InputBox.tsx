@@ -4,10 +4,10 @@ import { IInputBox } from '../../interfaces/interfaces';
 
 function InputBox(props: IInputBox) {
   const [isDirty, setIsDirty] = useState<boolean>(false);
-  const { id, name, type, value, changeValue } = props;
+  const { id, name, type, value, onValueChange } = props;
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setIsDirty(true);
-    changeValue(e);
+    onValueChange(e);
   };
   return (
     <div className="form-control" data-test="input-box">

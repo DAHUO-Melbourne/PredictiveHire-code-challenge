@@ -10,7 +10,7 @@ export interface IInputBox {
   name: string;
   type?: string;
   value: string;
-  changeValue: (e: React.FormEvent<HTMLInputElement>) => void;
+  onValueChange: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 export interface IMenuProps {

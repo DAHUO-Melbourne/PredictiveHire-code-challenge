@@ -14,7 +14,7 @@ describe('InputBox should be correctly rendered', () => {
     id: 'username',
     name: 'username',
     value: '',
-    changeValue: () => {},
+    onValueChange: () => {},
   };
   beforeEach(() => {
     component = setUp(props);
@@ -39,7 +39,7 @@ describe('InputBox should correctly show error message', () => {
     id: 'username',
     name: 'username',
     value: '',
-    changeValue: () => {},
+    onValueChange: () => {},
   };
   beforeEach(() => {
     component = setUp(props);

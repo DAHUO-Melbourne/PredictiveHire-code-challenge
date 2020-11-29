@@ -54,7 +54,7 @@ function LoginForm(): JSX.Element {
         name="username"
         value={username}
         data-test="username-input"
-        changeValue={handleUsernameInput}
+        onValueChange={handleUsernameInput}
       />
       <InputBox
         id="password"
@@ -62,7 +62,7 @@ function LoginForm(): JSX.Element {
         type="password"
         value={password}
         data-test="password-input"
-        changeValue={handlePasswordInput}
+        onValueChange={handlePasswordInput}
       />
       <div className="form-actions">
         <ButtonComponent
