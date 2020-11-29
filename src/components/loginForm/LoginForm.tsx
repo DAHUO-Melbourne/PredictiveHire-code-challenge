@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { message } from 'antd';
 import './LoginForm.scss';
 import Button from '../button';
-import InputBox from '../inputBox';
+import Input from '../Input';
 import { login } from '../../api/apis';
 
 function LoginForm(): JSX.Element {
@@ -49,14 +49,14 @@ function LoginForm(): JSX.Element {
         handleSubmit(e);
       }}
     >
-      <InputBox
+      <Input
         id="username"
         name="username"
         value={username}
         data-test="username-input"
         onValueChange={handleUsernameInput}
       />
-      <InputBox
+      <Input
         id="password"
         name="password"
         type="password"

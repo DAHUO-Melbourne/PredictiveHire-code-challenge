@@ -5,7 +5,7 @@ export interface IButton {
   content: string;
 }
 
-export interface IInputBox {
+export interface IInput {
   id: string;
   name: string;
   type?: string;

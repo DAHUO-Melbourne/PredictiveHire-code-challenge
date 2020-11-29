@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './InputBox.scss';
-import { IInputBox } from '../../interfaces/interfaces';
+import './Input.scss';
+import { IInput } from '../../interfaces/interfaces';
 
-function InputBox(props: IInputBox) {
+function Input(props: IInput) {
   const [isDirty, setIsDirty] = useState<boolean>(false);
   const { id, name, type, value, onValueChange } = props;
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -29,4 +29,4 @@ function InputBox(props: IInputBox) {
   );
 }
 
-export default InputBox;
+export default Input;

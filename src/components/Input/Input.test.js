@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { findByTestAttr } from '../../utils';
-import InputBox from './index';
+import Input from './index';
 
 const setUp = (props = {}) => {
-  const component = shallow(<InputBox {...props} />);
+  const component = shallow(<Input {...props} />);
   return component;
 };
 
-describe('InputBox should be correctly rendered', () => {
+describe('Input should be correctly rendered', () => {
   let component;
   const props = {
     id: 'username',
@@ -19,7 +19,7 @@ describe('InputBox should be correctly rendered', () => {
   beforeEach(() => {
     component = setUp(props);
   });
-  it('InputBox should be rendered correctly', () => {
+  it('Input should be rendered correctly', () => {
     const wrapper = findByTestAttr(component, 'input-box');
     expect(wrapper.length).toBe(1);
   });
@@ -33,7 +33,7 @@ describe('InputBox should be correctly rendered', () => {
   });
 });
 
-describe('InputBox should correctly show error message', () => {
+describe('Input should correctly show error message', () => {
   let component;
   const props = {
     id: 'username',

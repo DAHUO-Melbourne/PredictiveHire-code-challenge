@@ -27,7 +27,7 @@ describe('correctly rendered', () => {
   });
 });
 
-describe('InputBox correctly interacted', () => {
+describe('Input correctly interacted', () => {
   let component;
   beforeEach(() => {
     component = setUp();
