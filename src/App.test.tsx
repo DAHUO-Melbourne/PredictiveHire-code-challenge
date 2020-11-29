@@ -1,5 +1,5 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React, { Component } from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
 import { findByTestAttr } from './utils';
 import App from './App';
 
@@ -9,7 +9,7 @@ const setUp = (props = {}) => {
 };
 
 describe('correctly rendered', () => {
-  let component;
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   beforeEach(() => {
     component = setUp();
   });

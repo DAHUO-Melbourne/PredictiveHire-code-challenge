@@ -1,15 +1,16 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React, { Component } from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
 import { findByTestAttr } from '../../utils';
 import Input from './index';
+import { IInput } from '../../interfaces/interfaces';
 
-const setUp = (props = {}) => {
+const setUp = (props: IInput) => {
   const component = shallow(<Input {...props} />);
   return component;
 };
 
 describe('Input should be correctly rendered', () => {
-  let component;
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   const props = {
     id: 'username',
     name: 'username',
@@ -34,7 +35,7 @@ describe('Input should be correctly rendered', () => {
 });
 
 describe('Input should correctly show error message', () => {
-  let component;
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   const props = {
     id: 'username',
     name: 'username',

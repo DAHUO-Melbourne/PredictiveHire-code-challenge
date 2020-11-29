@@ -1,5 +1,5 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React, { Component } from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
 import { findByTestAttr } from '../../utils';
 import LoginForm from './index';
 
@@ -9,7 +9,7 @@ const setUp = (props = {}) => {
 };
 
 describe('correctly rendered', () => {
-  let component;
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   beforeEach(() => {
     component = setUp();
   });
@@ -28,7 +28,7 @@ describe('correctly rendered', () => {
 });
 
 describe('Input correctly interacted', () => {
-  let component;
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   beforeEach(() => {
     component = setUp();
   });

@@ -1,15 +1,16 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React, { Component } from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
 import { findByTestAttr } from '../../utils';
 import MenuComponent from './index';
+import { IMenuProps } from '../../interfaces/interfaces';
 
-const setUp = (props = {}) => {
+const setUp = (props: IMenuProps) => {
   const component = shallow(<MenuComponent {...props} />);
   return component;
 };
 
 describe('correctly rendered', () => {
-  let component;
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   const data = [
     {
       key: 1,
