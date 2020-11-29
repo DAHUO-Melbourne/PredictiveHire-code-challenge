@@ -1,14 +1,14 @@
 .form-control {
   margin-bottom: 1rem;
-  & label,
-  & input {
+  label,
+  input {
     width: 100%;
     display: block;
   }
-  & label {
+  label {
     margin-bottom: 0.5rem;
   }
-  & .error-msg {
+  .error-msg {
     color: red;
   }
 }
