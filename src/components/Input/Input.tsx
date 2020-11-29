@@ -7,7 +7,7 @@ function Input(props: IInput) {
   const { id, name, type, value, onValueChange } = props;
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setIsDirty(true);
-    onValueChange(e);
+    onValueChange(e.currentTarget.value);
   };
   return (
     <div className="form-control" data-test="input-box">

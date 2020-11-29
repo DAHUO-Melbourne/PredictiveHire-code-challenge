@@ -10,7 +10,7 @@ export interface IInput {
   name: string;
   type?: string;
   value: string;
-  onValueChange: (e: React.FormEvent<HTMLInputElement>) => void;
+  onValueChange: (value: string) => void;
 }
 
 export interface IMenuProps {

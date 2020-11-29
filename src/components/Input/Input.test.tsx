@@ -56,3 +56,26 @@ describe('Input should correctly show error message', () => {
     expect(errMsg.length).toBe(1);
   });
 });
+
+describe('Input correctly interacted', () => {
+  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
+  const fn = jest.fn();
+  const props = {
+    id: 'username',
+    name: 'username',
+    value: '',
+    onValueChange: fn,
+  };
+  beforeEach(() => {
+    component = setUp(props);
+  });
+  it('onValueChange should be called correctly', () => {
+    const wrapper = findByTestAttr(component, 'input');
+    wrapper.simulate('change', {
+      currentTarget: {
+        value: 'a',
+      },
+    });
+    expect(fn).toHaveBeenCalledWith('a');
+  });
+});

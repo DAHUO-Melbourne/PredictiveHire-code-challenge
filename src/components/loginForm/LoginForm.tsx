@@ -33,12 +33,12 @@ function LoginForm(): JSX.Element {
     }
   };
 
-  const handleUsernameInput = (e: React.FormEvent<HTMLInputElement>) => {
-    setUsername(e.currentTarget.value);
+  const handleUsernameInput = (value: string) => {
+    setUsername(value);
   };
 
-  const handlePasswordInput = (e: React.FormEvent<HTMLInputElement>) => {
-    setPassword(e.currentTarget.value);
+  const handlePasswordInput = (value: string) => {
+    setPassword(value);
   };
 
   return (
