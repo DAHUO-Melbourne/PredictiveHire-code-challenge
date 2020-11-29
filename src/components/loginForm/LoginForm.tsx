@@ -12,8 +12,8 @@ function LoginForm(): JSX.Element {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLoading(true);
     if (username && password) {
+      setIsLoading(true);
       login({ username, password })
         .then((response) => response.data)
         .then((json) => {

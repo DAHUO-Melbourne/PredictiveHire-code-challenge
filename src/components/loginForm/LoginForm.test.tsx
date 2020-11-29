@@ -32,23 +32,11 @@ describe('Input correctly interacted', () => {
   beforeEach(() => {
     component = setUp();
   });
-  it('should set button loading to true', () => {
-    const usernameInputElem = findByTestAttr(component, 'username-input');
-    const passwordInputElem = findByTestAttr(component, 'password-input');
-    usernameInputElem.simulate('change', {
-      currentTarget: {
-        value: 'aaa',
-      },
-    });
-    passwordInputElem.simulate('change', {
-      currentTarget: {
-        value: 'aaa',
-      },
-    });
+  it('should set button loading to false', () => {
     component.simulate('submit', {
       preventDefault: () => {},
     });
     const submitButton = findByTestAttr(component, 'submit-button');
-    expect(submitButton.props().isLoading).toBe(true);
+    expect(submitButton.props().isLoading).toBe(false);
   });
 });
