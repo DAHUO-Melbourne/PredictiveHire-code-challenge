@@ -12,7 +12,7 @@ describe('link button correctly rendered', () => {
   let component;
   const props = {
     href: '/',
-    loading: false,
+    isLoading: false,
     type: 'button',
     content: 'click',
   };
@@ -28,7 +28,7 @@ describe('link button correctly rendered', () => {
 describe('no-link button correctly rendered', () => {
   let component;
   const props = {
-    loading: false,
+    isLoading: false,
     type: 'button',
     content: 'click',
   };

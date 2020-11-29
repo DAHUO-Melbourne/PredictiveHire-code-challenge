@@ -5,11 +5,11 @@ import './CustomizedButton.scss';
 import { IButton } from '../../interfaces/interfaces';
 
 function ButtonComponent(props: IButton): JSX.Element {
-  const { href, loading, type, content } = props;
+  const { href, isLoading, type, content } = props;
   if (href) {
     return (
       <Link to={href} data-test="link-button">
-        <Button className="form-button" htmlType={type} loading={loading}>
+        <Button className="form-button" htmlType={type} loading={isLoading}>
           {content}
         </Button>
       </Link>
@@ -20,7 +20,7 @@ function ButtonComponent(props: IButton): JSX.Element {
         className="form-button"
         data-test="no-link-button"
         htmlType={type}
-        loading={loading}
+        loading={isLoading}
       >
         {content}
       </Button>

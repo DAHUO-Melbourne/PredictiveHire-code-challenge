@@ -1,6 +1,6 @@
 export interface IButton {
   href?: string;
-  loading: boolean;
+  isLoading: boolean;
   type: 'button' | 'submit' | 'reset' | undefined;
   content: string;
 }

@@ -8,16 +8,16 @@ import { login } from '../../api/apis';
 function LoginForm(): JSX.Element {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
+    setIsLoading(true);
     if (username && password) {
       login({ username, password })
         .then((response) => response.data)
         .then((json) => {
-          setLoading(false);
+          setIsLoading(false);
           if (json[0] === 'Logged in successfully') {
             message.success('Successfully logged in');
           }
@@ -66,14 +66,14 @@ function LoginForm(): JSX.Element {
       />
       <div className="form-actions">
         <ButtonComponent
-          loading={loading}
+          isLoading={isLoading}
           type="submit"
           content="submit"
           data-test="submit-button"
         />
         <ButtonComponent
           href="/"
-          loading={false}
+          isLoading={false}
           type="button"
           content="cancel"
         />

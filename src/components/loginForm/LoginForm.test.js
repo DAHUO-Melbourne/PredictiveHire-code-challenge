@@ -49,6 +49,6 @@ describe('InputBox correctly interacted', () => {
       preventDefault: () => {},
     });
     const submitButton = findByTestAttr(component, 'submit-button');
-    expect(submitButton.props().loading).toBe(true);
+    expect(submitButton.props().isLoading).toBe(true);
   });
 });
