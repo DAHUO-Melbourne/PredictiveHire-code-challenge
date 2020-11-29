@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { message } from 'antd';
 import './LoginForm.scss';
-import Button from '../button';
+import Button from '../Button';
 import Input from '../Input';
 import { login } from '../../api/apis';
 
