@@ -1,31 +1,31 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button as AntdButton } from 'antd';
 import { Link } from 'react-router-dom';
-import './CustomizedButton.scss';
+import './Button.scss';
 import { IButton } from '../../interfaces/interfaces';
 
-function ButtonComponent(props: IButton): JSX.Element {
+function Button(props: IButton): JSX.Element {
   const { href, isLoading, type, content } = props;
   if (href) {
     return (
       <Link to={href} data-test="link-button">
-        <Button className="form-button" htmlType={type} loading={isLoading}>
+        <AntdButton className="form-button" htmlType={type} loading={isLoading}>
           {content}
-        </Button>
+        </AntdButton>
       </Link>
     );
   } else {
     return (
-      <Button
+      <AntdButton
         className="form-button"
         data-test="no-link-button"
         htmlType={type}
         loading={isLoading}
       >
         {content}
-      </Button>
+      </AntdButton>
     );
   }
 }
 
-export default ButtonComponent;
+export default Button;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { findByTestAttr } from '../../utils';
-import ButtonComponent from './index';
+import Button from './index';
 
 const setUp = (props = {}) => {
-  const component = shallow(<ButtonComponent {...props} />);
+  const component = shallow(<Button {...props} />);
   return component;
 };
 

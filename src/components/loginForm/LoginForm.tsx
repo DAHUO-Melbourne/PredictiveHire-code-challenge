@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { message } from 'antd';
 import './LoginForm.scss';
-import ButtonComponent from '../button';
+import Button from '../button';
 import InputBox from '../inputBox';
 import { login } from '../../api/apis';
 
@@ -65,18 +65,13 @@ function LoginForm(): JSX.Element {
         onValueChange={handlePasswordInput}
       />
       <div className="form-actions">
-        <ButtonComponent
+        <Button
           isLoading={isLoading}
           type="submit"
           content="submit"
           data-test="submit-button"
         />
-        <ButtonComponent
-          href="/"
-          isLoading={false}
-          type="button"
-          content="cancel"
-        />
+        <Button href="/" isLoading={false} type="button" content="cancel" />
       </div>
     </form>
   );
