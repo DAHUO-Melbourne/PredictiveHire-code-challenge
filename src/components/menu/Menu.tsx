@@ -1,12 +1,12 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Menu } from 'antd';
+import { Menu as AntdMenu } from 'antd';
 import { Link } from 'react-router-dom';
 import { IMenuProps, IMenuItem } from '../../interfaces/interfaces';
 
-const { SubMenu } = Menu;
+const { SubMenu } = AntdMenu;
 
-function MenuComponent(props: IMenuProps): JSX.Element {
+function Menu(props: IMenuProps): JSX.Element {
   const recursion = (data: Array<IMenuItem>) => {
     return data.map((menu) => {
       if (menu.children) {
@@ -17,18 +17,18 @@ function MenuComponent(props: IMenuProps): JSX.Element {
         );
       } else {
         return (
-          <Menu.Item key={menu.key}>
+          <AntdMenu.Item key={menu.key}>
             <Link to={menu.url}>{menu.title}</Link>
-          </Menu.Item>
+          </AntdMenu.Item>
         );
       }
     });
   };
   return (
-    <Menu mode="horizontal" data-test="menu-component">
+    <AntdMenu mode="horizontal" data-test="menu-component">
       {recursion(props.data)}
-    </Menu>
+    </AntdMenu>
   );
 }
 
-export default MenuComponent;
+export default Menu;
