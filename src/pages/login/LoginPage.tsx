@@ -6,7 +6,7 @@ function LoginPage(): JSX.Element {
     <div data-test="login-page">
       <LoginForm />
     </div>
-  )
+  );
 }
 
 export default LoginPage;

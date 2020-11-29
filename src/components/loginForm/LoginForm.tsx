@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { message } from 'antd';
 import './LoginForm.scss';
 import ButtonComponent from '../button';
@@ -29,20 +29,26 @@ function LoginForm(): JSX.Element {
           message.error('logged in failed');
           setUsername('');
           setPassword('');
-        })
+        });
     }
-  }
+  };
 
   const handleUsernameInput = (e: React.FormEvent<HTMLInputElement>) => {
-    setUsername(e.currentTarget.value)
-  }
+    setUsername(e.currentTarget.value);
+  };
 
   const handlePasswordInput = (e: React.FormEvent<HTMLInputElement>) => {
-    setPassword(e.currentTarget.value)
-  }
+    setPassword(e.currentTarget.value);
+  };
 
   return (
-    <form className="auth-form" data-test="login-form" onSubmit={(e) => { handleSubmit(e) }}>
+    <form
+      className="auth-form"
+      data-test="login-form"
+      onSubmit={(e) => {
+        handleSubmit(e);
+      }}
+    >
       <InputBox
         id="username"
         name="username"
@@ -61,19 +67,19 @@ function LoginForm(): JSX.Element {
       <div className="form-actions">
         <ButtonComponent
           loading={loading}
-          type='submit'
-          content='submit'
-          data-test='submit-button'
+          type="submit"
+          content="submit"
+          data-test="submit-button"
         />
         <ButtonComponent
-          href='/'
+          href="/"
           loading={false}
-          type='button'
-          content='cancel'
+          type="button"
+          content="cancel"
         />
       </div>
-    </form >
-  )
+    </form>
+  );
 }
 
-export default LoginForm
+export default LoginForm;

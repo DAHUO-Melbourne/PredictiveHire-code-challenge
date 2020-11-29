@@ -8,14 +8,25 @@ function InputBox(props: IInputBox) {
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setIsDirty(true);
     changeValue(e);
-  }
+  };
   return (
     <div className="form-control" data-test="input-box">
       <label htmlFor={id}>{name}</label>
-      <input data-test="input" type={type} id={id} value={value} onChange={(e) => handleChange(e)} required />
-      {isDirty && !value && <div className="error-msg" data-test="error-message">please input your {name}</div>}
+      <input
+        data-test="input"
+        type={type}
+        id={id}
+        value={value}
+        onChange={(e) => handleChange(e)}
+        required
+      />
+      {isDirty && !value && (
+        <div className="error-msg" data-test="error-message">
+          please input your {name}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default InputBox;

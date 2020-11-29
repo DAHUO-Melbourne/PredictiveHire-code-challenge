@@ -9,7 +9,7 @@ function Homepage(): JSX.Element {
       <Menu data={data} />
       <h1 className="heading">Welcome to PreditiveHire!</h1>
     </div>
-  )
+  );
 }
 
 export default Homepage;
