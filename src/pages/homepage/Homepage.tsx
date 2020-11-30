@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../components/Menu';
+import Menu from '../../components/menu';
 import data from '../../data/rData.json';
 import './Homepage.scss';
 

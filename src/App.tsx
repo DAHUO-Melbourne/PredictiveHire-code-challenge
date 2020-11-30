@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Homepage from './pages/Homepage';
-import LoginPage from './pages/LoginPage';
+import Homepage from './pages/homepage';
+import LoginPage from './pages/loginPage';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {

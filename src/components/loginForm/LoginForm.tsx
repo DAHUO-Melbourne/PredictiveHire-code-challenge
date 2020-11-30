@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { message } from 'antd';
 import './LoginForm.scss';
-import Button from '../Button';
-import Input from '../Input';
+import Button from '../button';
+import Input from '../input';
 import { login } from '../../api/apis';
 
 function LoginForm(): JSX.Element {
