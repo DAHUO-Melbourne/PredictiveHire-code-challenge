@@ -1,0 +1,128 @@
+[
+  {
+    "key": 1,
+    "icon": "appstore",
+    "title": "Recruiment Automation",
+    "url": "",
+    "children": [
+      {
+        "key": 4,
+        "title": "Solutions",
+        "url": "",
+        "children": [
+          {
+            "key": 8,
+            "title": "Science Explained",
+            "url": "",
+            "children": [
+              {
+                "key": 19,
+                "title": "Time Calculator",
+                "url": "",
+                "children": [
+                  {
+                    "key": 11,
+                    "title": "Retail Ebook",
+                    "url": ""
+                  }
+                ]
+              },
+              {
+                "key": 29,
+                "title": "Data Calculator",
+                "url": "",
+                "children": [
+                  {
+                    "key": 23,
+                    "title": "Book Calculator",
+                    "url": ""
+                  },
+                  {
+                    "key": 27,
+                    "title": "Math Calculator",
+                    "url": "",
+                    "children": [
+                      {
+                        "key": 76,
+                        "title": "Minus Calculator",
+                        "url": ""
+                      },
+                      {
+                        "key": 86,
+                        "title": "Add Calculator",
+                        "url": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": 9,
+            "title": "Protect your Data",
+            "url": ""
+          },
+          {
+            "key": 10,
+            "title": "How do we protect",
+            "url": "",
+            "children": [
+              {
+                "key": 66,
+                "title": "Protect Testing",
+                "url": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": 5,
+        "title": "Why its Fair",
+        "url": "",
+        "children": [
+          {
+            "key": 16,
+            "title": "Version Testing",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "key": 6,
+        "title": "How Fair is important",
+        "url": "",
+        "children": [
+          {
+            "key": 26,
+            "title": "nested list Testing",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "key": 7,
+        "title": "Concept of Fair",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "key": 2,
+    "icon": "setting",
+    "title": "Resources",
+    "url": ""
+  },
+  {
+    "key": 3,
+    "icon": "mail",
+    "title": "Reviews",
+    "url": ""
+  },
+  {
+    "key": 21,
+    "title": "login",
+    "url": "login"
+  }
+]

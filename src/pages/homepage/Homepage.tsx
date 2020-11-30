@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from '../../components/Menu';
-import { data } from '../../data/rData';
+import data from '../../data/rData.json';
 import './Homepage.scss';
 
 function Homepage(): JSX.Element {
