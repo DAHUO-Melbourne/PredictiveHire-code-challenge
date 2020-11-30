@@ -52,6 +52,3 @@ The form input added validation for required username and password:
 4. `npm run coverage` to get coverage.
 
 - Tool: Jest
-
-## Deployment:
-[Click here](https://nervous-cori-35811d.netlify.app/)
