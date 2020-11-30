@@ -27,7 +27,7 @@ React, TypeScript, antd, hooks, Unit Test, axios, miragejs, sass, react-router.
 ### 4. Operation Instructions:
 
 1. nest menu:
-![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-Test/blob/dev/public/images/NestedMenu.gif)
+![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-code-challenge/blob/dev/public/images/NestedMenu.gif)
 
 2. login operations:
 I offer you a group of correct username and password for you to login successfully:
@@ -36,14 +36,14 @@ username:okay
 password:okay
 ```
 If you login successfully, then you would see a message popped up says 'Successfully logged in', otherwise you would receive an error message says 'logged in failed'
-![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-Test/blob/dev/public/images/login.gif)
+![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-code-challenge/blob/dev/public/images/login.gif)
 
 3. validation:
 The form input added validation for required username and password:
-![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-Test/blob/dev/public/images/validation.gif)
+![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-code-challenge/blob/dev/public/images/validation.gif)
 
 4. click cancel button the page would return back to the homepage:
-![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-Test/blob/dev/public/images/cancel.gif)
+![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-code-challenge/blob/dev/public/images/cancel.gif)
 
 ## Running tests
 
