@@ -45,7 +45,7 @@ describe('Input should correctly show error message', () => {
   beforeEach(() => {
     component = setUp(props);
   });
-  it('input initial value should be correct', () => {
+  it('error message should be correct rendered after dirty', () => {
     const wrapper = findByTestAttr(component, 'input');
     wrapper.simulate('change', {
       currentTarget: {

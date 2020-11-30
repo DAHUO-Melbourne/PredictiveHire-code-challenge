@@ -27,12 +27,12 @@ describe('correctly rendered', () => {
   });
 });
 
-describe('Input correctly interacted', () => {
+describe('LoginForm correctly acted when submitted', () => {
   let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
   beforeEach(() => {
     component = setUp();
   });
-  it('should set button loading to false', () => {
+  it('button loading should be false if user do not input anything', () => {
     component.simulate('submit', {
       preventDefault: () => {},
     });
