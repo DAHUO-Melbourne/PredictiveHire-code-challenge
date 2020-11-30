@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { message } from 'antd';
 import './LoginForm.scss';
 import Button from '../button';
-import Input from '../input';
+import Input from '../Input';
 import { login } from '../../api/apis';
 
 function LoginForm(): JSX.Element {
