@@ -27,6 +27,7 @@ React, TypeScript, antd, hooks, Unit Test, axios, miragejs, sass, react-router.
 ### 4. Operation Instructions:
 
 1. nest menu:
+Hover or click the first item, which is **Recruiment Automation**, then check the sub menu and item as the gif shown below.
 ![avatar](https://github.com/DAHUO-Melbourne/PredictiveHire-code-challenge/blob/dev/public/images/NestedMenu.gif)
 
 2. login operations:
